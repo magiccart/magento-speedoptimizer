@@ -1,0 +1,7 @@
+# modman file for magiccart
+app/code/local/Magiccart/Speedoptimizer/ app/code/local/Magiccart/Speedoptimizer/
+app/etc/modules/Magiccart_Speedoptimizer.xml app/etc/modules/Magiccart_Speedoptimizer.xml
+js/magiccart/jquery.min.js js/magiccart/jquery.min.js
+js/magiccart/jquery.noconflict.js js/magiccart/jquery.noconflict.js
+js/magiccart/plugin/lazyload.min.js js/magiccart/plugin/lazyload.min.js
+skin/frontend/base/default/images/loader-1.gif skin/frontend/base/default/images/loader-1.gif

@@ -1,0 +1,7 @@
+{
+	"name": "magiccart/speedoptimizer",
+	"type": "magento-module",
+	"require": {
+		"magento-hackathon/magento-composer-installer": "*"
+	}
+}

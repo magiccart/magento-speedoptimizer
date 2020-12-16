@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+<config>
+    <tabs>
+        <magiccart translate="label">
+            <label>Magiccart</label>
+            <sort_order>100</sort_order>
+        </magiccart>
+    </tabs>
+    <sections>
+        <magiccart_speedoptimizer>
+            <label>Speed Optimizer</label>
+            <tab>magiccart</tab>
+            <sort_order>110</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>Speed Optimizer</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enabled: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                            
+                        </enabled>
+                        <jquery translate="label comment">
+                            <label>Add jQuery: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                            
+                        </jquery>
+                        <loading_body translate="label comment">
+                            <label>Preloading Body: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                            
+                        </loading_body>
+                        <loading_body_placeholder translate="label comment">
+                            <label>Loading Body placeholder :</label>
+                            <comment>Allowed file types: jpg, jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magiccart</upload_dir>
+                            <base_url type="media" scope_info="1">magiccart</base_url>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <show_in_store>1</show_in_store>
+                            <comment>Loading Body placeholder</comment>
+                        </loading_body_placeholder>
+                        <loading_img translate="label comment">
+                            <label>Preloading Images: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                            
+                        </loading_img>
+                        <exclude_img translate="label comment">
+                            <label>Exclude Image class: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Exclude Images exist class(comma separated)</comment>                        
+                        </exclude_img>
+                        <loading_img_placeholder translate="label comment">
+                            <label>Loading Image placeholder :</label>
+                            <comment>Allowed file types: jpg, jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magiccart</upload_dir>
+                            <base_url type="media" scope_info="1">magiccart</base_url>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <show_in_store>1</show_in_store>
+                            <comment>Loading Image placeholder</comment>
+                        </loading_img_placeholder>
+                        <placeholder translate="label comment">
+                            <label>Placeholder Images: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Placeholder help keep layout original while loading</comment>                        
+                        </placeholder>
+                        <regex_block translate="label comment">
+                            <label>Regex Block: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Regex Block HMTL you want add lazyload.</comment>                        
+                        </regex_block>
+                        <minify_html translate="label comment">
+                            <label>Minify Html: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Minify Html</comment>                        
+                        </minify_html>
+                        <body_includes translate="label comment">
+                            <label>Scripts and Style Sheets</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>This will be included before body closing tag in page HTML.</comment>                        
+                        </body_includes>
+                    </fields>                   
+                </general> 
+            </groups>
+        </magiccart_speedoptimizer>
+    </sections>
+</config>
+

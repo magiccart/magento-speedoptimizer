@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <update handle="speedoptimizerdefault" /> 
+    </default>
+    <speedoptimizerdefault>
+        <reference name="head">
+            <action method="addJs" ifconfig="magiccart_speedoptimizer/general/jquery"><script>magiccart/jquery.min.js</script></action>         
+            <action method="addJs" ifconfig="magiccart_speedoptimizer/general/jquery"><script>magiccart/jquery.noconflict.js</script></action>
+            <action method="addJs" ifconfig="magiccart_speedoptimizer/general/enabled"><script>magiccart/plugin/lazyload.min.js</script></action>
+        </reference>      
+    </speedoptimizerdefault>
+</layout>

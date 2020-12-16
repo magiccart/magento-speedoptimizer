@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Magiccart_Speedoptimizer>
+            <version>0.1.0</version>
+        </Magiccart_Speedoptimizer>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <speedoptimizer>
+                    <file>magiccart/speedoptimizer.xml</file>
+                </speedoptimizer>
+            </updates>
+        </layout>
+        <events>
+            <controller_front_send_response_before>
+                <observers>
+                    <magiccart_speedoptimizer_response_before>
+                        <type>singleton</type>
+                        <class>magiccart_speedoptimizer/observer</class>
+                        <method>beforeSendResponse</method>
+                    </magiccart_speedoptimizer_response_before>
+                </observers>
+            </controller_front_send_response_before>
+        </events>
+    </frontend>
+    <global>
+        <models>
+            <magiccart_speedoptimizer>
+                <class>Magiccart_Speedoptimizer_Model</class>
+            </magiccart_speedoptimizer>
+        </models>
+        <helpers>
+            <magiccart_speedoptimizer>
+                <class>Magiccart_Speedoptimizer_Helper</class>
+            </magiccart_speedoptimizer>
+        </helpers>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <magiccart>
+                                            <title>Magiccart</title>
+                                        </magiccart>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <magiccart_speedoptimizer>
+            <general>
+                <enabled>1</enabled>
+                <jquery>1</jquery>
+                <loading_body>0</loading_body>
+                <loading_img>1</loading_img>
+                <exclude_img>loaded, notlazy</exclude_img>
+                <placeholder>1</placeholder>
+                <regex_block><![CDATA[<div class="main-container]]></regex_block>
+                <lazy_ajax>0</lazy_ajax>
+                <minify_html>1</minify_html>
+                <minify_js>1</minify_js>
+                <defer_js>0</defer_js>
+                <body_includes><![CDATA[
+                    <script type="text/javascript"> 
+                        jQuery(document).ready(function($){
+                        var imgLazy = $('img.lazyload').not(".loaded"); 
+                        imgLazy.lazyload(); 
+                        imgLazy.on('load',function(){
+                            var img = $(this);
+                            if(img.hasClass( "loaded" )) return;
+                            if(img.attr('src') == img.data('src')){img.addClass('loaded');}
+                            else {img.lazyload();}
+                            if($.equalheight) $.fn.equalheight();
+                        });
+                        $('body').on('contentUpdated', function () {
+                            var lazy = $(this).find("img.lazyload").not(".loaded").lazyload();
+                            lazy.on('load',function(){
+                                var img = $(this);
+                                if(img.hasClass( "loaded" )) return;
+                                if(img.attr('src') == img.data('src')){img.addClass('loaded');}
+                                else {img.lazyload();}
+                                if($.equalheight) $.fn.equalheight();
+                            });
+                        });
+                        $('body').removeClass('loading_body');
+                        }); 
+                    </script>]]>
+                </body_includes>
+            </general>
+        </magiccart_speedoptimizer>
+    </default>
+</config>

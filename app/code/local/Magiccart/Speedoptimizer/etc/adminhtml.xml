@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+ <config>
+    <acl>
+        <resources>
+            <admin>
+                <children>     
+                    <magiccart translate="title" module="speedoptimizer">
+                        <title>Magiccart</title>
+                        <sort_order>89</sort_order>               
+                        <children>
+                            <speedoptimizer translate="title" module="speedoptimizer">
+                                <title>Speed Optimizer</title>
+                                <sort_order>30</sort_order>
+                            </speedoptimizer>
+                        </children>
+                    </magiccart>   
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <magiccart_speedoptimizer>
+                                        <title>Speed Optimizer</title>
+                                    </magiccart_speedoptimizer>
+                                </children>
+                            </config>
+                        </children>
+                    </system>                 
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

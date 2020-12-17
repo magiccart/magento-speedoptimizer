@@ -127,6 +127,16 @@
                             <show_in_store>1</show_in_store>
                             <comment>Minify Html</comment>                        
                         </minify_html>
+                        <minify_js translate="label comment">
+                            <label>Minify inline Javascript: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Minify inline Javascript</comment>                        
+                        </minify_js>
                         <body_includes translate="label comment">
                             <label>Scripts and Style Sheets</label>
                             <frontend_type>textarea</frontend_type>

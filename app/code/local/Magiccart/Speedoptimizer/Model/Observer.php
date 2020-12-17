@@ -339,6 +339,7 @@ class Magiccart_Speedoptimizer_Model_Observer  extends Mage_Core_Block_Template
 
         $style .= 'body.loading_img .lazyload{background-image: url("' . $loadingImg . '")}';
         $style .= 'body.loading_img img.loaded{background-image: none}';    
+        $style .= '.lazyload{background-size: 30px auto;background-position: center center;background-repeat: no-repeat;overflow: hidden;}';    
 
         if($style){
             $style = '<style type="text/css">' . $style . '</style>';

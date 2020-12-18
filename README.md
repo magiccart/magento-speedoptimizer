@@ -36,6 +36,8 @@ Using this extension will help your website have faster loading speed, thus maki
 - Preloading body which shows when website is loading. Preloading Body is very useful in case your website is quite large or the network speed is quite slow, giving a pleasant feeling and mistaking your website to load normally.
 - Change any of the loading icons you like with the Loading Body placeholder.
 
+![speedoptimizer-img](https://github.com/magiccart/magento-speedoptimizer/blob/master/Image/magento-1-speed-optimizition-3.gif)
+
 #### 4. Preloading Images
 - Preloading Images is displayed when the image has not been fully loaded and you can change icon loading.
 - If you want to change the loading icon you can use the Loading Image placeholder.
